@@ -24,9 +24,16 @@
 			<h1 class="text-center">Welcome to my Library!</h1>
 		</div>
 		<div class="container mb-3 text-center d-block">
-			<button type="submit" class="btn btn-primary">Add Book</button>
+			<button
+				id="showFormBtn"
+				type="submit"
+				class="btn btn-primary"
+				data-bs-toggle="button"
+			>
+				Add Book
+			</button>
 		</div>
-		<div class="container mb-3 d-none">
+		<div id="form" class="container mb-3 d-none">
 			<h4 class="text-center">What have you read?</h4>
 			<form class="row g-3">
 				<div class="col-md-6">
@@ -61,19 +68,21 @@
 				</div>
 				<div class="col-md-4">
 					<label for="progress" class="form-label">Progress</label>
-					<select class="form-select" aria-label="read">
+					<select id="progress" class="form-select" aria-label="read">
 						<option selected>Select</option>
 						<option value="1">Completed</option>
 						<option value="2">Reading</option>
 						<option value="3">Not Started</option>
 					</select>
 				</div>
-				<button type="submit" class="btn btn-primary">Submit</button>
+				<button id="submit" type="submit" class="btn btn-primary">
+					Submit
+				</button>
 			</form>
 		</div>
 		<div class="container-fluid text-center table-responsive mb-3">
 			<h4 class="text-center">Books</h4>
-			<table class="table table-hover table-striped">
+			<table id="table" class="table table-hover table-striped">
 				<caption>
 					List of books
 				</caption>
@@ -170,6 +179,6 @@
 			integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
 			crossorigin="anonymous"
 		></script>
-		<script src="script.js"></script>
+		<script src="./script.js"></script>
 	</body>
 </html>
