@@ -23,42 +23,47 @@
 		<div class="container-fluid mb-3">
 			<h1 class="text-center">Welcome to my Library!</h1>
 		</div>
-		<div class="container text-center mb-3">
+		<div class="container mb-3">
 			<h4 class="text-center">What have you read?</h4>
-			<form>
-				<div class="mb-3">
+			<form class="row g-3">
+				<div class="col-md-6">
 					<label for="authorFirstName" class="form-label"
 						>Author First Name</label
 					>
 					<input
-						type="name"
+						type="authorFirstName"
 						class="form-control"
 						id="authorFirstName"
 						aria-describedby="nameHelp"
 					/>
 				</div>
-				<div class="mb-3">
+				<div class="col-md-6">
 					<label for="authorLastName" class="form-label"
 						>Author Last Name</label
 					>
 					<input
-						type="name"
+						type="authorLastName"
 						class="form-control"
 						id="authorLastName"
 						aria-describedby="nameHelp"
 					/>
 				</div>
-				<div class="mb-3">
+				<div class="col-md-6">
 					<label for="title" class="form-label">Title</label>
 					<input type="title" class="form-control" id="title" />
 				</div>
-				<div class="mb-3">
+				<div class="col-md-2">
 					<label for="pages" class="form-label">Pages</label>
 					<input type="pages" class="form-control" id="pages" value="0" />
 				</div>
-				<div class="form-check mb-3">
-					<input class="form-check-input" type="checkbox" value="" id="read" />
-					<label class="form-check-label" for="read"> Read </label>
+				<div class="col-md-4">
+					<label for="progress" class="form-label">Progress</label>
+					<select class="form-select" aria-label="read">
+						<option selected>Select</option>
+						<option value="1">Completed</option>
+						<option value="2">Reading</option>
+						<option value="3">Not Started</option>
+					</select>
 				</div>
 				<button type="submit" class="btn btn-primary">Submit</button>
 			</form>
@@ -76,33 +81,82 @@
 						<th scope="col">Author Last</th>
 						<th scope="col">Title</th>
 						<th scope="col">Pages</th>
-						<th scope="col">Read</th>
+						<th scope="col">Progress</th>
+						<th scope="col">Actions</th>
 					</tr>
 				</thead>
 				<tbody class="table-group-divider">
 					<tr>
 						<th scope="row">1</th>
-						<td>Mark</td>
-						<td>Otto</td>
-						<td>@mdo</td>
-						<td>Otto</td>
-						<td>@mdo</td>
+						<td>F. Scott</td>
+						<td>Fitzgerald</td>
+						<td>The Great Gatsby</td>
+						<td>208</td>
+						<td>Competed</td>
+						<td>
+							<button
+								class="btn btn-primary btn-sm ms-3"
+								data-mdb-add-entry
+								data-mdb-target="#table_inputs"
+							>
+								<i class="bi bi-pencil"></i>
+							</button>
+							<button
+								class="btn btn-primary btn-sm ms-3"
+								data-mdb-add-entry
+								data-mdb-target="#table_inputs"
+							>
+								<i class="bi bi-x"></i>
+							</button>
+						</td>
 					</tr>
 					<tr>
 						<th scope="row">2</th>
-						<td>Jacob</td>
-						<td>Thornton</td>
-						<td>@fat</td>
-						<td>Thornton</td>
-						<td>@fat</td>
+						<td>James</td>
+						<td>Joyce</td>
+						<td>Ulysses</td>
+						<td>730</td>
+						<td>Reading</td>
+						<td>
+							<button
+								class="btn btn-primary btn-sm ms-3"
+								data-mdb-add-entry
+								data-mdb-target="#table_inputs"
+							>
+								<i class="bi bi-pencil"></i>
+							</button>
+							<button
+								class="btn btn-primary btn-sm ms-3"
+								data-mdb-add-entry
+								data-mdb-target="#table_inputs"
+							>
+								<i class="bi bi-x"></i>
+							</button>
+						</td>
 					</tr>
 					<tr>
 						<th scope="row">3</th>
-						<td>Larry the Bird</td>
-						<td>@twitter</td>
-						<td>@twitter</td>
-						<td>@twitter</td>
-						<td>@twitter</td>
+						<td>Herman</td>
+						<td>Melville</td>
+						<td>Moby Dick</td>
+						<td>378</td>
+						<td>Not Started</td>
+						<td>
+							<button
+								class="btn btn-primary btn-sm ms-3"
+								data-mdb-add-entry
+								data-mdb-target="#table_inputs"
+							>
+								<i class="bi bi-pencil"></i>
+							</button>
+							<button
+								class="btn btn-primary btn-sm ms-3"
+								data-mdb-add-entry
+								data-mdb-target="#table_inputs"
+							>
+								<i class="bi bi-x"></i>
+							</button>
+						</td>
 					</tr>
 				</tbody>
 			</table>
