@@ -39,13 +39,6 @@ class UI {
 		<td>${book.progress}</td>
 		<td>${book.isbn}</td>
 		<td><button
-			class="btn btn-primary btn-sm ms-3"
-				data-mdb-add-entry
-				data-mdb-target="#table_inputs"
-			>
-				<i class="bi bi-pencil edit"></i>
-			</button>
-			<button
 			class="btn btn-danger btn-sm ms-3"
 				data-mdb-add-entry
 				data-mdb-target="#table_inputs"
@@ -53,6 +46,7 @@ class UI {
 				<i class="bi bi-x delete"></i>
 			</button></td>
 		`
+		// <button class="btn btn-primary btn-sm ms-3"data-mdb-add-entrydata-mdb-target="#table_inputs"><i class="bi bi-pencil edit"></i></button>
 
 		list.appendChild(row)
 	}
