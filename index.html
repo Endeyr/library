@@ -35,26 +35,22 @@
 		</div>
 		<div id="form" class="container mb-3 d-none">
 			<h4 class="text-center">What have you read?</h4>
-			<form class="row g-3">
+			<form id="book-form" class="row g-3">
 				<div class="col-md-6">
-					<label for="authorFirstName" class="form-label"
-						>Author First Name</label
-					>
+					<label for="author" class="form-label">Author</label>
 					<input
-						type="authorFirstName"
+						type="author"
 						class="form-control"
-						id="authorFirstName"
+						id="author"
 						aria-describedby="nameHelp"
 					/>
 				</div>
 				<div class="col-md-6">
-					<label for="authorLastName" class="form-label"
-						>Author Last Name</label
-					>
+					<label for="isbn" class="form-label">ISBN</label>
 					<input
-						type="authorLastName"
+						type="isbn"
 						class="form-control"
-						id="authorLastName"
+						id="isbn"
 						aria-describedby="nameHelp"
 					/>
 				</div>
@@ -70,9 +66,9 @@
 					<label for="progress" class="form-label">Progress</label>
 					<select id="progress" class="form-select" aria-label="read">
 						<option selected>Select</option>
-						<option value="1">Completed</option>
-						<option value="2">Reading</option>
-						<option value="3">Not Started</option>
+						<option value="Completed">Completed</option>
+						<option value="Reading">Reading</option>
+						<option value="Not Started">Not Started</option>
 					</select>
 				</div>
 				<button id="submit" type="submit" class="btn btn-primary">
@@ -88,89 +84,15 @@
 				</caption>
 				<thead>
 					<tr>
-						<th scope="col">#</th>
-						<th scope="col">Author First</th>
-						<th scope="col">Author Last</th>
+						<th scope="col">Author</th>
 						<th scope="col">Title</th>
 						<th scope="col">Pages</th>
 						<th scope="col">Progress</th>
+						<th scope="col">ISBN</th>
 						<th scope="col">Actions</th>
 					</tr>
 				</thead>
-				<tbody class="table-group-divider">
-					<tr>
-						<th scope="row">1</th>
-						<td>F. Scott</td>
-						<td>Fitzgerald</td>
-						<td>The Great Gatsby</td>
-						<td>208</td>
-						<td>Competed</td>
-						<td>
-							<button
-								class="btn btn-primary btn-sm ms-3"
-								data-mdb-add-entry
-								data-mdb-target="#table_inputs"
-							>
-								<i class="bi bi-pencil"></i>
-							</button>
-							<button
-								class="btn btn-primary btn-sm ms-3"
-								data-mdb-add-entry
-								data-mdb-target="#table_inputs"
-							>
-								<i class="bi bi-x"></i>
-							</button>
-						</td>
-					</tr>
-					<tr>
-						<th scope="row">2</th>
-						<td>James</td>
-						<td>Joyce</td>
-						<td>Ulysses</td>
-						<td>730</td>
-						<td>Reading</td>
-						<td>
-							<button
-								class="btn btn-primary btn-sm ms-3"
-								data-mdb-add-entry
-								data-mdb-target="#table_inputs"
-							>
-								<i class="bi bi-pencil"></i>
-							</button>
-							<button
-								class="btn btn-primary btn-sm ms-3"
-								data-mdb-add-entry
-								data-mdb-target="#table_inputs"
-							>
-								<i class="bi bi-x"></i>
-							</button>
-						</td>
-					</tr>
-					<tr>
-						<th scope="row">3</th>
-						<td>Herman</td>
-						<td>Melville</td>
-						<td>Moby Dick</td>
-						<td>378</td>
-						<td>Not Started</td>
-						<td>
-							<button
-								class="btn btn-primary btn-sm ms-3"
-								data-mdb-add-entry
-								data-mdb-target="#table_inputs"
-							>
-								<i class="bi bi-pencil"></i>
-							</button>
-							<button
-								class="btn btn-primary btn-sm ms-3"
-								data-mdb-add-entry
-								data-mdb-target="#table_inputs"
-							>
-								<i class="bi bi-x"></i>
-							</button>
-						</td>
-					</tr>
-				</tbody>
+				<tbody id="book-list" class="table-group-divider"></tbody>
 			</table>
 		</div>
 		<footer class="container-fluid text-center">Aaron Thompson</footer>
